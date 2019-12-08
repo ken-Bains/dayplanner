@@ -4,7 +4,7 @@ $(document).ready(function () {
     $(".currentDay").text(moment().format("dddd, MMMM Do YYYY"));
 
     createInputFields();
-    showColorsOnInputs();
+    setInterval(showColorsOnInputs(), 1000);
 
     if(localStorage.getItem("dayplannerItems") !== null) {
         dayplannerStorage = JSON.parse(localStorage.getItem("dayplannerItems"));
