@@ -1,0 +1,29 @@
+.buttonRoundCorners {
+ border-top-right-radius: 20% !important;
+ border-bottom-right-radius: 20% !important;
+}
+.jumbotron {
+    /* background: white; */
+    border-bottom: 10px solid black;
+}
+
+.col-sm-1 {
+    padding-left: 0 !important;
+}
+.bottomContainer {
+    margin-bottom: 100px;
+}
+
+@media screen and (max-width: 574.999px) {
+    .buttonRoundCorners {
+        border-top-right-radius: 0% !important;
+        border-bottom-right-radius: 0% !important;
+        width: 100%;
+    }
+    .col-sm-1 {
+        padding-right: 0;
+    }
+    .input-group {
+        margin: 0 !important;
+    }
+  }
