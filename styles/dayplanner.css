@@ -13,6 +13,9 @@
 .bottomContainer {
     margin-bottom: 100px;
 }
+textarea {
+    color : white !important;
+}
 
 @media screen and (max-width: 574.999px) {
     .buttonRoundCorners {
