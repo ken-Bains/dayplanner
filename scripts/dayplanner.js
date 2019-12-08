@@ -12,13 +12,26 @@ $(document).ready(function () {
     console.log(moment().format("H"));
 
     createInputFields();
+    loadDayplannerValues();
 
     $(".buttonRoundCorners").on("click", function () {
         var inputValue = $(this).parent().siblings("textarea").val();
         var locationValue = $(this).attr("id");
+
+        dayplannerStorage = JSON.parse(localStorage.getItem("dayplannerItems"));
         dayplannerStorage[locationValue] = inputValue;
         localStorage.setItem("dayplannerItems", JSON.stringify(dayplannerStorage));
     });
+    function loadDayplannerValues() {
+        var storage = JSON.parse(localStorage.getItem("dayplannerItems"));
+        for (var i = 0; i < timeArr.length; i++){
+            var num = i + 9;
+            if(storage.hasOwnProperty(num)){
+                var idOfTextArea = "#" + num;
+                $(idOfTextArea).val(storage[num])
+            }
+        }
+    };
 
 
     function createInputFields() {
